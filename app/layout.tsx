@@ -10,7 +10,7 @@ import SessisonProvider from "../components/SessisonProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://dailyblog-demo.vercel.app/"),
+	metadataBase: new URL("https://automatic-doodle-drab.vercel.app/"),
 
 	title: {
 		template: "%s | Esport ws",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 		title: "Esport Ws",
 		description:
 			"esport news website provides a reliable and authoritative source for news, insights, and analysis on the competitive gaming industry, catering to a diverse audience of enthusiasts and professionals alike.",
-		url: "https://dailyblog-demo.vercel.app/",
+		url: "https://automatic-doodle-drab.vercel.app/",
 		siteName: "Esport Ws",
 		images: "/og.png",
 		type: "website",
