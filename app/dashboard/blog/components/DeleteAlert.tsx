@@ -23,12 +23,13 @@ export default function DeleteAlert({ id }: { id: string }) {
 	const onSubmit = (e: ChangeEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		startTransition(async () => {
+			const result = await deleteBlogById(id)
 			const { error } = JSON.parse(
 				await deleteBlogById(id)
 			) as PostgrestSingleResponse<null>;
 			if (error) {
 				toast({
-					title: "Fail to update ",
+					title: "Fail to delete update ",
 					description: (
 						<pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
 							<code className="text-white">{error?.message}</code>
