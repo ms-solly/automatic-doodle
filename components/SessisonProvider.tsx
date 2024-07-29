@@ -25,7 +25,7 @@ export default function SessisonProvider() {
 				.from("users")
 				.select("*")
 				.eq("id", userSesssion.session?.user.id)
-				.single();
+				
 			setUser(data);
 		}
 	};

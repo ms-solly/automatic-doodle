@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
 	GitHubLogoIcon,
 	DiscIcon,
@@ -17,14 +18,14 @@ export default function Footer() {
 						</p>
 					</div>
 					<div className="flex items-center gap-2">
-						<GitHubLogoIcon className="w-5 h-5" />
-						<LinkedInLogoIcon className="w-5 h-5" />
-						<DiscordLogoIcon className="w-5 h-5" />
+						<Link href='#'><GitHubLogoIcon className="w-5 h-5" /></Link>
+						<Link href='#'><LinkedInLogoIcon className="w-5 h-5" /></Link>
+						<Link href='#'><DiscordLogoIcon className="w-5 h-5" /></Link>
 					</div>
 				</div>
 
 				<h1 className="text-sm">
-					&copy; 2023 EsportWs.All right reserved
+					&copy; 2024 EsportWs.All right reserved
 				</h1>
 			</div>
 		</footer>

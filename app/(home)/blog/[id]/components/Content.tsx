@@ -25,7 +25,7 @@ export default function Content({ blogId }: { blogId: string }) {
 			.from("blog_content")
 			.select("*")
 			.eq("blog_id", blogId)
-			.single();
+			
 		setBlog(data);
 		setLoading(false);
 	};

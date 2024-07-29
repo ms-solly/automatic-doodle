@@ -13,25 +13,25 @@ export const metadata: Metadata = {
 	metadataBase: new URL("https://dailyblog-demo.vercel.app/"),
 
 	title: {
-		template: "%s | Daily Blog",
-		default: "Daily Blog",
+		template: "%s | Esport ws",
+		default: "Esport ws",
 	},
 	authors: {
 		name: "chensokheng",
 	},
 
 	description:
-		"Explore a world of captivating stories and insightful articles on our blog. From the latest trends to in-depth analyses, our blog covers a wide range of topics to keep you informed and entertained. Join our community of readers and discover thought-provoking content that sparks curiosity and fosters discussion. Stay updated with our diverse collection of blog posts, written by passionate contributors who share their expertise and unique perspectives. Engage with a platform that goes beyond the ordinary, providing you with enriching content that resonates with your interests.",
+		"esport news website provides a reliable and authoritative source for news, insights, and analysis on the competitive gaming industry, catering to a diverse audience of enthusiasts and professionals alike.",
 	openGraph: {
-		title: "Daily Blog",
+		title: "Esport Ws",
 		description:
-			"Explore a world of captivating stories and insightful articles on our blog. From the latest trends to in-depth analyses, our blog covers a wide range of topics to keep you informed and entertained. Join our community of readers and discover thought-provoking content that sparks curiosity and fosters discussion. Stay updated with our diverse collection of blog posts, written by passionate contributors who share their expertise and unique perspectives. Engage with a platform that goes beyond the ordinary, providing you with enriching content that resonates with your interests.",
+			"esport news website provides a reliable and authoritative source for news, insights, and analysis on the competitive gaming industry, catering to a diverse audience of enthusiasts and professionals alike.",
 		url: "https://dailyblog-demo.vercel.app/",
-		siteName: "Daily Blog",
+		siteName: "Esport Ws",
 		images: "/og.png",
 		type: "website",
 	},
-	keywords: ["daily web coding", "chensokheng", "dailywebcoding"],
+	keywords: ["Esport", "News", "Techniques"],
 };
 
 export default function RootLayout({
@@ -42,7 +42,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
-				className={cn("antialiased dark:bg-[#09090B]", inter.className)}
+				className={cn("antialiased dark:bg-[#09090B] ", inter.className)}
 			>
 				<ThemeProvider
 					attribute="class"

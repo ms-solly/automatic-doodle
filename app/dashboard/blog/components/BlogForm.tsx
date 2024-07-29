@@ -313,7 +313,7 @@ export default function BlogForm({
 
 const ImgaeEror = ({ src }: { src: string }) => {
 	try {
-		return <Image src={src} alt="" width={100} height={100} />;
+		return <Image src={src} alt="post_img" width={100} height={100} />;
 	} catch {
 		return <h1>Invalid</h1>;
 	}

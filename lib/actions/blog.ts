@@ -21,7 +21,7 @@ export async function createBlog(data: {
 		.from("blog")
 		.insert(blog)
 		.select("id")
-		.single();
+		
 
 	if (blogResult.error?.message && !blogResult.data) {
 		return JSON.stringify(blogResult);
@@ -69,7 +69,7 @@ export async function readBlogDeatailById(blogId: string) {
 		.from("blog")
 		.select("*,blog_content(*)")
 		.eq("id", blogId)
-		.single();
+		
 }
 
 export async function readBlogContent(blogId: string) {
@@ -79,7 +79,7 @@ export async function readBlogContent(blogId: string) {
 		.from("blog_content")
 		.select("content")
 		.eq("blog_id", blogId)
-		.single();
+		
 }
 
 export async function updateBlogById(blogId: string, data: IBlog) {

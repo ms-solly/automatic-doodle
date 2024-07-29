@@ -68,7 +68,7 @@ const onSuccessSubscription = async (
 		})
 		.eq("email", email)
 		.select("id")
-		.single();
+		
 	await supabase.auth.admin.updateUserById(data?.id!, {
 		user_metadata: { stripe_customer_id: null },
 	});
@@ -88,7 +88,7 @@ const onCacnelSubscription = async (
 		})
 		.eq("stripe_subscriptoin_id", subscription_id)
 		.select("id")
-		.single();
+		
 
 	await supabase.auth.admin.updateUserById(data?.id!, {
 		user_metadata: { stripe_customer_id: null },

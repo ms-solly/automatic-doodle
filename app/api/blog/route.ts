@@ -19,7 +19,7 @@ export async function GET(request: Request) {
 			.from("blog")
 			.select("*")
 			.eq("id", id)
-			.single();
+			
 		return Response.json({ ...result });
 	}
 	return Response.json({});
