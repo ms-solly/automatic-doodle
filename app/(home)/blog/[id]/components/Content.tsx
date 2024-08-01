@@ -13,7 +13,7 @@ export default function Content({ blogId }: { blogId: string }) {
 		blog_id: string;
 		content: string;
 		created_at: string;
-	} | null>();
+	} | null>(null);
 
 	const supabase = createBrowserClient<Database>(
 		process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -21,20 +21,26 @@ export default function Content({ blogId }: { blogId: string }) {
 	);
 
 	const readBlogContent = async () => {
-		const { data } = await supabase
+		const { data, error } = await supabase
 			.from("blog_content")
 			.select("*")
-			.eq("blog_id", blogId)
-			
-		setBlog(data);
+			.eq("blog_id", blogId);
+
+		if (error) {
+			console.error(error);
+			setBlog(null);
+		} else if (data && data.length > 0) {
+			setBlog(data[0]); // Set the first blog in the array
+		} else {
+			setBlog(null); // Set null if no blogs are found
+		}
+
 		setLoading(false);
 	};
 
 	useEffect(() => {
 		readBlogContent();
-
-		// eslint-disable-next-line
-	}, []);
+	}, [blogId]); // Add blogId as a dependency
 
 	if (loading) {
 		return <BlogContentLoading />;
