@@ -23,12 +23,12 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 		},
 		openGraph: {
 			title: blog?.title,
-			url: "https://dailyblog-demo.vercel.app/blog" + params.id,
+			url: "https://automatic-doodle-drab.vercel.app/blog" + params.id,
 			siteName: "Daily Blog",
 			images: blog?.image_url,
 			type: "website",
 		},
-		keywords: ["daily web coding", "chensokheng", "dailywebcoding"],
+		keywords: ["esport", "chensokheng", "gamig"],
 	};
 }
 
